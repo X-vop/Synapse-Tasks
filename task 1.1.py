@@ -7,7 +7,8 @@ DJs = Kevin, Stuart, Bob, Edith
 DJ = "Kevin", "Stuart", "Bob", "Edith"
 from itertools import combinations
 comb = list(combinations(DJ,2))
-combs = list(combinations(DJs,2)) #print(f"{comb} are the total possible combinations")
+combs = list(combinations(DJs,2))
+print(f"{comb} are the total possible combinations")
 
 count=0
 DJ_final=[]
@@ -17,12 +18,17 @@ for i in range(0,len(combs)):
     #print(a)
     if len(a) >=3:
         count +=1
-        #print(comb[i])
+        print(comb[i])
         DJ_final.append(comb[i])
-        #print(len(a)*10)
-        overlap.append(len(a)*10)
+        #x1 = len(a)*10/(len(combs[i][0]))          removing unnecessary variables
+        #x2 = len(a)*10/(len(combs[i][1]))
+        if (len(a)*10/(len(combs[i][0])) > 2 and len(a)*10/(len(combs[i][1])) > 2):
+            x3 = (len(a)*1000/(len(combs[i][0])*len(combs[i][1])))
+            print(x3)
+            overlap.append(x3)
+
 final = zip(DJ_final,overlap)
 final= sorted(final,key = lambda x: -x[1])
-print(dict(final))
-
+# print(dict(final))
+print(final)
 
