@@ -60,7 +60,7 @@ elif (ops == "2"):
     print(acc_bal)
 elif (ops == "3"):
     acc_id = input("Enter name of member (Mahek , Gaurang, Unnati, Arham): ")
-    total = money_owed(request_spending, "Mahek")
+    total = money_owed(request_spending, acc_id)
     print(total)
 else:
     print("Please enter valid number: ")
