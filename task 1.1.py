@@ -23,7 +23,7 @@ for i in range(0,len(combs)):
         #x1 = len(a)*10/(len(combs[i][0]))          removing unnecessary variables
         #x2 = len(a)*10/(len(combs[i][1]))
         if (len(a)*10/(len(combs[i][0])) > 2 and len(a)*10/(len(combs[i][1])) > 2):
-            x3 = (len(a)*1000/(len(combs[i][0])*len(combs[i][1])))
+            x3 = (len(a)*2*100/(len(combs[i][0])+len(combs[i][1])))
             print(x3)
             overlap.append(x3)
 
